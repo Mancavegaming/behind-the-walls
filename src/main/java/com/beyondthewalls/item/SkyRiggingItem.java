@@ -60,7 +60,7 @@ public class SkyRiggingItem extends Item {
     private int findCartridgeSlot(Player player) {
         for (int i = 0; i < player.getInventory().getContainerSize(); i++) {
             ItemStack invStack = player.getInventory().getItem(i);
-            if (invStack.is(ModItems.THRUST_CARTRIDGE.get())) {
+            if (!invStack.isEmpty() && invStack.is(ModItems.THRUST_CARTRIDGE.get())) {
                 return i;
             }
         }
