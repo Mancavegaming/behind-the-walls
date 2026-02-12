@@ -22,6 +22,9 @@ public class ModCreativeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.SKY_RIGGING.get());
                         output.accept(ModItems.THRUST_CARTRIDGE.get());
+                        output.accept(ModItems.ULTRAHARD_BLADES.get());
+                        output.accept(ModItems.BLADE_INSERT.get());
+                        output.accept(ModItems.BROKEN_BLADE_HANDLES.get());
                     }).build());
 
     public static void register(IEventBus modEventBus) {

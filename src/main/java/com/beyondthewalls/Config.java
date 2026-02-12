@@ -25,5 +25,30 @@ public class Config {
             .comment("Cooldown between Sky Rigging uses in ticks")
             .defineInRange("hookCooldownTicks", 10, 0, 100);
 
+    // Titan settings
+    public static final ModConfigSpec.DoubleValue TITAN_HEALTH = BUILDER
+            .comment("Base health of a Titan")
+            .defineInRange("titanHealth", 100.0, 10.0, 1000.0);
+
+    public static final ModConfigSpec.DoubleValue TITAN_DAMAGE = BUILDER
+            .comment("Base attack damage of a Titan")
+            .defineInRange("titanDamage", 12.0, 1.0, 100.0);
+
+    public static final ModConfigSpec.IntValue TITAN_SPAWN_WEIGHT = BUILDER
+            .comment("Spawn weight for Titans in valid biomes")
+            .defineInRange("titanSpawnWeight", 5, 0, 100);
+
+    public static final ModConfigSpec.DoubleValue NAPE_BONUS_MULTIPLIER = BUILDER
+            .comment("Damage multiplier for hitting the Titan's nape from behind")
+            .defineInRange("napeBonusMultiplier", 1.5, 0.1, 10.0);
+
+    public static final ModConfigSpec.DoubleValue BLADE_NAPE_BONUS = BUILDER
+            .comment("Extra damage multiplier when hitting nape with Ultrahard Blades")
+            .defineInRange("bladeNapeBonus", 2.0, 0.1, 10.0);
+
+    public static final ModConfigSpec.DoubleValue BODY_DAMAGE_MULTIPLIER = BUILDER
+            .comment("Damage multiplier for body hits on Titans (non-nape)")
+            .defineInRange("bodyDamageMultiplier", 0.1, 0.0, 1.0);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 }

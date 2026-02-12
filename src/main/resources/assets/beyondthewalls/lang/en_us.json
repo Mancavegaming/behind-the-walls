@@ -2,5 +2,9 @@
   "itemGroup.beyondthewalls": "Beyond the Walls",
   "item.beyondthewalls.sky_rigging": "Sky Rigging",
   "item.beyondthewalls.thrust_cartridge": "Thrust Cartridge",
-  "entity.beyondthewalls.grappling_hook": "Grappling Hook"
+  "item.beyondthewalls.ultrahard_blades": "Ultrahard Steel Blades",
+  "item.beyondthewalls.blade_insert": "Blade Insert",
+  "item.beyondthewalls.broken_blade_handles": "Broken Blade Handles",
+  "entity.beyondthewalls.grappling_hook": "Grappling Hook",
+  "entity.beyondthewalls.titan": "Titan"
 }

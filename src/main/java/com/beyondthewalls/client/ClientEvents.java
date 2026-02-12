@@ -1,6 +1,8 @@
 package com.beyondthewalls.client;
 
 import com.beyondthewalls.BeyondTheWalls;
+import com.beyondthewalls.client.model.TitanModel;
+import com.beyondthewalls.client.renderer.TitanRenderer;
 import com.beyondthewalls.init.ModEntities;
 
 import net.minecraft.resources.ResourceLocation;
@@ -17,6 +19,12 @@ public class ClientEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.GRAPPLING_HOOK.get(), GrapplingHookRenderer::new);
+        event.registerEntityRenderer(ModEntities.TITAN.get(), TitanRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(TitanModel.LAYER_LOCATION, TitanModel::createBodyLayer);
     }
 
     @SubscribeEvent

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beyondthewalls:broken_blade_handles"
+    },
+    {
+      "item": "beyondthewalls:blade_insert"
+    },
+    {
+      "item": "beyondthewalls:blade_insert"
+    }
+  ],
+  "result": {
+    "id": "beyondthewalls:ultrahard_blades",
+    "count": 1
+  }
+}

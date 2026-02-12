@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "beyondthewalls:item/broken_blade_handles"
+  }
+}
