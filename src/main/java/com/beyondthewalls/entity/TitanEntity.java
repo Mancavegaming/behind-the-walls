@@ -1,13 +1,17 @@
 package com.beyondthewalls.entity;
 
 import com.beyondthewalls.Config;
+import com.beyondthewalls.entity.goal.TitanBreakWallGoal;
+import com.beyondthewalls.init.ModItems;
 import com.beyondthewalls.item.UltrahardBladeItem;
+import com.beyondthewalls.world.DistrictManager;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -22,6 +26,7 @@ import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.ServerLevelAccessor;
@@ -70,6 +75,7 @@ public class TitanEntity extends Monster {
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0, true));
+        this.goalSelector.addGoal(2, new TitanBreakWallGoal(this));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.8));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 16.0F));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
@@ -242,6 +248,15 @@ public class TitanEntity extends Monster {
         }
     }
 
+    @Override
+    protected void dropCustomDeathLoot(ServerLevel level, DamageSource source, boolean recentlyHit) {
+        super.dropCustomDeathLoot(level, source, recentlyHit);
+        int min = Config.ESSENCE_DROP_MIN.get();
+        int max = Config.ESSENCE_DROP_MAX.get();
+        int count = min + level.random.nextInt(Math.max(1, max - min + 1));
+        this.spawnAtLocation(new ItemStack(ModItems.TITAN_ESSENCE.get(), count));
+    }
+
     public static boolean checkTitanSpawnRules(EntityType<TitanEntity> type, ServerLevelAccessor level,
                                                 MobSpawnType spawnType, BlockPos pos, RandomSource random) {
         // Require open sky
@@ -255,6 +270,12 @@ public class TitanEntity extends Monster {
         // Require solid ground below
         if (!level.getBlockState(pos.below()).isSolid()) {
             return false;
+        }
+        // Block spawns inside districts
+        if (level instanceof ServerLevel serverLevel) {
+            if (DistrictManager.get(serverLevel).isInsideAnyDistrict(pos)) {
+                return false;
+            }
         }
         return true;
     }

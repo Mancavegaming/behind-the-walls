@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " IG",
+    "IEI",
+    " E "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "E": { "item": "beyondthewalls:titan_essence" },
+    "G": { "item": "minecraft:gold_ingot" }
+  },
+  "result": {
+    "id": "beyondthewalls:war_horn",
+    "count": 1
+  }
+}

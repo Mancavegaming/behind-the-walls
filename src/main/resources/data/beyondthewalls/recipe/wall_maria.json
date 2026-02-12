@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SE",
+    "SS"
+  ],
+  "key": {
+    "S": { "item": "minecraft:stone" },
+    "E": { "item": "beyondthewalls:titan_essence" }
+  },
+  "result": {
+    "id": "beyondthewalls:wall_maria",
+    "count": 8
+  }
+}

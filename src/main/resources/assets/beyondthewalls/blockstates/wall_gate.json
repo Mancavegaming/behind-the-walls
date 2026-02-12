@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north,half=lower,open=false": { "model": "beyondthewalls:block/wall_gate" },
+    "facing=south,half=lower,open=false": { "model": "beyondthewalls:block/wall_gate", "y": 180 },
+    "facing=west,half=lower,open=false": { "model": "beyondthewalls:block/wall_gate", "y": 270 },
+    "facing=east,half=lower,open=false": { "model": "beyondthewalls:block/wall_gate", "y": 90 },
+    "facing=north,half=upper,open=false": { "model": "beyondthewalls:block/wall_gate_upper" },
+    "facing=south,half=upper,open=false": { "model": "beyondthewalls:block/wall_gate_upper", "y": 180 },
+    "facing=west,half=upper,open=false": { "model": "beyondthewalls:block/wall_gate_upper", "y": 270 },
+    "facing=east,half=upper,open=false": { "model": "beyondthewalls:block/wall_gate_upper", "y": 90 },
+    "facing=north,half=lower,open=true": { "model": "beyondthewalls:block/wall_gate_open" },
+    "facing=south,half=lower,open=true": { "model": "beyondthewalls:block/wall_gate_open", "y": 180 },
+    "facing=west,half=lower,open=true": { "model": "beyondthewalls:block/wall_gate_open", "y": 270 },
+    "facing=east,half=lower,open=true": { "model": "beyondthewalls:block/wall_gate_open", "y": 90 },
+    "facing=north,half=upper,open=true": { "model": "beyondthewalls:block/wall_gate_open_upper" },
+    "facing=south,half=upper,open=true": { "model": "beyondthewalls:block/wall_gate_open_upper", "y": 180 },
+    "facing=west,half=upper,open=true": { "model": "beyondthewalls:block/wall_gate_open_upper", "y": 270 },
+    "facing=east,half=upper,open=true": { "model": "beyondthewalls:block/wall_gate_open_upper", "y": 90 }
+  }
+}

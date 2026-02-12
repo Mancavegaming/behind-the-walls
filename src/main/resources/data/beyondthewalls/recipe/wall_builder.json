@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " I ",
+    " SI",
+    "E  "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "S": { "item": "minecraft:stick" },
+    "E": { "item": "beyondthewalls:titan_essence" }
+  },
+  "result": {
+    "id": "beyondthewalls:wall_builder",
+    "count": 1
+  }
+}

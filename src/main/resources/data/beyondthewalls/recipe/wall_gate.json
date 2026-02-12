@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IE",
+    "II",
+    "IE"
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "E": { "item": "beyondthewalls:titan_essence" }
+  },
+  "result": {
+    "id": "beyondthewalls:wall_gate",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IEI",
+    "IFI",
+    " E "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "E": { "item": "beyondthewalls:titan_essence" },
+    "F": { "item": "minecraft:furnace" }
+  },
+  "result": {
+    "id": "beyondthewalls:gas_refinery",
+    "count": 1
+  }
+}

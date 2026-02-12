@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OO",
+    "EE",
+    "OO"
+  ],
+  "key": {
+    "O": { "item": "minecraft:obsidian" },
+    "E": { "item": "beyondthewalls:titan_essence" }
+  },
+  "result": {
+    "id": "beyondthewalls:wall_sina",
+    "count": 8
+  }
+}

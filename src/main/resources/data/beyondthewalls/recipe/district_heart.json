@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GEG",
+    "EDE",
+    "GEG"
+  ],
+  "key": {
+    "G": { "item": "minecraft:gold_ingot" },
+    "E": { "item": "beyondthewalls:titan_essence" },
+    "D": { "item": "minecraft:diamond" }
+  },
+  "result": {
+    "id": "beyondthewalls:district_heart",
+    "count": 1
+  }
+}

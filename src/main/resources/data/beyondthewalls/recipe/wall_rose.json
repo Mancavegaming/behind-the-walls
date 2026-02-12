@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DD",
+    "DE",
+    "DE"
+  ],
+  "key": {
+    "D": { "item": "minecraft:deepslate" },
+    "E": { "item": "beyondthewalls:titan_essence" }
+  },
+  "result": {
+    "id": "beyondthewalls:wall_rose",
+    "count": 8
+  }
+}

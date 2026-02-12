@@ -3,6 +3,8 @@ package com.beyondthewalls.init;
 import com.beyondthewalls.BeyondTheWalls;
 import com.beyondthewalls.item.SkyRiggingItem;
 import com.beyondthewalls.item.UltrahardBladeItem;
+import com.beyondthewalls.item.WallBuilderItem;
+import com.beyondthewalls.item.WarHornItem;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
@@ -28,6 +30,15 @@ public class ModItems {
 
     public static final DeferredItem<Item> BROKEN_BLADE_HANDLES = ITEMS.registerSimpleItem("broken_blade_handles",
             new Item.Properties().stacksTo(1));
+
+    public static final DeferredItem<Item> TITAN_ESSENCE = ITEMS.registerSimpleItem("titan_essence",
+            new Item.Properties().stacksTo(64));
+
+    public static final DeferredItem<WallBuilderItem> WALL_BUILDER = ITEMS.register("wall_builder",
+            () -> new WallBuilderItem(new Item.Properties().durability(128)));
+
+    public static final DeferredItem<WarHornItem> WAR_HORN = ITEMS.register("war_horn",
+            () -> new WarHornItem(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus modEventBus) {
         ITEMS.register(modEventBus);

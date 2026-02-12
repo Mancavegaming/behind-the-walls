@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "IAI",
+    "IE "
+  ],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "E": { "item": "beyondthewalls:titan_essence" },
+    "A": { "item": "minecraft:anvil" }
+  },
+  "result": {
+    "id": "beyondthewalls:blacksmith_station",
+    "count": 1
+  }
+}
