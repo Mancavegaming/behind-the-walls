@@ -39,6 +39,7 @@ public class GrapplingHandler {
             // Preserve momentum + small upward boost
             Vec3 currentVel = player.getDeltaMovement();
             player.setDeltaMovement(currentVel.x, Math.max(currentVel.y, 0.4), currentVel.z);
+            player.hurtMarked = true;
             player.fallDistance = 0.0F;
             state.reset();
             return;
@@ -48,6 +49,7 @@ public class GrapplingHandler {
         double pullSpeed = Config.GRAPPLE_PULL_SPEED.get();
         Vec3 velocity = direction.normalize().scale(pullSpeed);
         player.setDeltaMovement(velocity);
+        player.hurtMarked = true;
 
         // Reset fall distance during pull (no fall damage while grappling)
         player.fallDistance = 0.0F;
