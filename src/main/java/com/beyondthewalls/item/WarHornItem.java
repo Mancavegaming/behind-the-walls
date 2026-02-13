@@ -35,7 +35,7 @@ public class WarHornItem extends Item {
 
         if (level instanceof ServerLevel serverLevel) {
             WaveManager waveManager = WaveManager.get(serverLevel);
-            waveManager.triggerWave(serverLevel);
+            waveManager.triggerWaveWithColossal(serverLevel);
 
             level.playSound(null, player.blockPosition(), SoundEvents.GOAT_HORN_SOUND_VARIANTS.getFirst().value(),
                     SoundSource.PLAYERS, 2.0F, 0.8F);

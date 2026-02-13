@@ -94,6 +94,106 @@ public class Config {
             .comment("Maximum Titan Essence dropped on death")
             .defineInRange("essenceDropMax", 4, 0, 64);
 
+    // Abnormal Titan settings
+    public static final ModConfigSpec.DoubleValue ABNORMAL_TITAN_HEALTH = BUILDER
+            .comment("Health of an Abnormal Titan")
+            .defineInRange("abnormalTitanHealth", 60.0, 10.0, 1000.0);
+
+    public static final ModConfigSpec.DoubleValue ABNORMAL_TITAN_SPEED = BUILDER
+            .comment("Movement speed of an Abnormal Titan")
+            .defineInRange("abnormalTitanSpeed", 0.28, 0.05, 1.0);
+
+    public static final ModConfigSpec.DoubleValue ABNORMAL_TITAN_DAMAGE = BUILDER
+            .comment("Attack damage of an Abnormal Titan")
+            .defineInRange("abnormalTitanDamage", 10.0, 1.0, 100.0);
+
+    public static final ModConfigSpec.IntValue ABNORMAL_ESSENCE_DROP_MIN = BUILDER
+            .comment("Minimum Titan Essence dropped by Abnormal Titan on death")
+            .defineInRange("abnormalEssenceDropMin", 2, 0, 64);
+
+    public static final ModConfigSpec.IntValue ABNORMAL_ESSENCE_DROP_MAX = BUILDER
+            .comment("Maximum Titan Essence dropped by Abnormal Titan on death")
+            .defineInRange("abnormalEssenceDropMax", 4, 0, 64);
+
+    // Armored Titan settings
+    public static final ModConfigSpec.DoubleValue ARMORED_TITAN_HEALTH = BUILDER
+            .comment("Health of an Armored Titan")
+            .defineInRange("armoredTitanHealth", 200.0, 10.0, 2000.0);
+
+    public static final ModConfigSpec.DoubleValue ARMORED_TITAN_SPEED = BUILDER
+            .comment("Movement speed of an Armored Titan")
+            .defineInRange("armoredTitanSpeed", 0.12, 0.05, 1.0);
+
+    public static final ModConfigSpec.DoubleValue ARMORED_TITAN_DAMAGE = BUILDER
+            .comment("Attack damage of an Armored Titan")
+            .defineInRange("armoredTitanDamage", 14.0, 1.0, 100.0);
+
+    public static final ModConfigSpec.DoubleValue ARMORED_BODY_DAMAGE_MULTIPLIER = BUILDER
+            .comment("Damage multiplier for body hits on Armored Titans (very resistant)")
+            .defineInRange("armoredBodyDamageMultiplier", 0.02, 0.0, 1.0);
+
+    public static final ModConfigSpec.DoubleValue ARMORED_WALL_BREAK_SPEED = BUILDER
+            .comment("Wall break speed multiplier for Armored Titans (lower = faster)")
+            .defineInRange("armoredWallBreakSpeed", 0.5, 0.1, 2.0);
+
+    public static final ModConfigSpec.IntValue ARMORED_ESSENCE_DROP_MIN = BUILDER
+            .comment("Minimum Titan Essence dropped by Armored Titan on death")
+            .defineInRange("armoredEssenceDropMin", 4, 0, 64);
+
+    public static final ModConfigSpec.IntValue ARMORED_ESSENCE_DROP_MAX = BUILDER
+            .comment("Maximum Titan Essence dropped by Armored Titan on death")
+            .defineInRange("armoredEssenceDropMax", 8, 0, 64);
+
+    // Colossal Titan settings
+    public static final ModConfigSpec.DoubleValue COLOSSAL_TITAN_HEALTH = BUILDER
+            .comment("Health of a Colossal Titan")
+            .defineInRange("colossalTitanHealth", 500.0, 50.0, 5000.0);
+
+    public static final ModConfigSpec.DoubleValue COLOSSAL_TITAN_SPEED = BUILDER
+            .comment("Movement speed of a Colossal Titan")
+            .defineInRange("colossalTitanSpeed", 0.08, 0.01, 1.0);
+
+    public static final ModConfigSpec.DoubleValue COLOSSAL_TITAN_DAMAGE = BUILDER
+            .comment("Attack damage of a Colossal Titan")
+            .defineInRange("colossalTitanDamage", 20.0, 1.0, 200.0);
+
+    public static final ModConfigSpec.IntValue COLOSSAL_STEAM_COOLDOWN = BUILDER
+            .comment("Cooldown in ticks between Colossal Titan steam bursts")
+            .defineInRange("colossalSteamCooldown", 200, 20, 1000);
+
+    public static final ModConfigSpec.DoubleValue COLOSSAL_STEAM_DAMAGE = BUILDER
+            .comment("Damage dealt by Colossal Titan steam burst")
+            .defineInRange("colossalSteamDamage", 8.0, 1.0, 100.0);
+
+    public static final ModConfigSpec.DoubleValue COLOSSAL_STEAM_RADIUS = BUILDER
+            .comment("Radius of Colossal Titan steam burst in blocks")
+            .defineInRange("colossalSteamRadius", 8.0, 2.0, 32.0);
+
+    public static final ModConfigSpec.IntValue COLOSSAL_ESSENCE_DROP_MIN = BUILDER
+            .comment("Minimum Titan Essence dropped by Colossal Titan on death")
+            .defineInRange("colossalEssenceDropMin", 8, 0, 64);
+
+    public static final ModConfigSpec.IntValue COLOSSAL_ESSENCE_DROP_MAX = BUILDER
+            .comment("Maximum Titan Essence dropped by Colossal Titan on death")
+            .defineInRange("colossalEssenceDropMax", 16, 0, 64);
+
+    // Wave variant thresholds
+    public static final ModConfigSpec.IntValue WAVE_ABNORMAL_START = BUILDER
+            .comment("Wave number at which Abnormal Titans start appearing")
+            .defineInRange("waveAbnormalStart", 1, 1, 100);
+
+    public static final ModConfigSpec.IntValue WAVE_ARMORED_START = BUILDER
+            .comment("Wave number at which Armored Titans start appearing")
+            .defineInRange("waveArmoredStart", 3, 1, 100);
+
+    public static final ModConfigSpec.IntValue WAVE_COLOSSAL_START = BUILDER
+            .comment("Wave number at which Colossal Titans start appearing")
+            .defineInRange("waveColossalStart", 5, 1, 100);
+
+    public static final ModConfigSpec.IntValue WAVE_COLOSSAL_INTERVAL = BUILDER
+            .comment("Colossal Titan spawns every Nth wave starting from waveColossalStart")
+            .defineInRange("waveColossalInterval", 3, 1, 20);
+
     // Structure generation settings
     public static final ModConfigSpec.IntValue DISTRICT_STRUCTURE_WALL_HEIGHT = BUILDER
             .comment("Height of walls in generated walled district structures (blocks above ground)")

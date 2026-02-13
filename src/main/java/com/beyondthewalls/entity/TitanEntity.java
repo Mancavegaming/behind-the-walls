@@ -97,6 +97,10 @@ public class TitanEntity extends Monster {
         return this.subEntities;
     }
 
+    protected float getBodyDamageMultiplier() {
+        return (float) Config.BODY_DAMAGE_MULTIPLIER.getAsDouble();
+    }
+
     @Override
     public boolean hurt(DamageSource source, float amount) {
         // Trigger damage burst particles via synched data
@@ -104,7 +108,7 @@ public class TitanEntity extends Monster {
             this.entityData.set(DATA_DAMAGE_TICKS, 5);
         }
         // Body hits receive reduced damage
-        float multiplier = (float) Config.BODY_DAMAGE_MULTIPLIER.getAsDouble();
+        float multiplier = getBodyDamageMultiplier();
         return super.hurt(source, amount * multiplier);
     }
 
@@ -181,7 +185,7 @@ public class TitanEntity extends Monster {
         }
     }
 
-    private void spawnSteamParticles() {
+    protected void spawnSteamParticles() {
         // Skip if no player nearby (performance)
         Player nearest = level().getNearestPlayer(this, 64.0);
         if (nearest == null) {
@@ -263,7 +267,7 @@ public class TitanEntity extends Monster {
         this.spawnAtLocation(new ItemStack(ModItems.TITAN_ESSENCE.get(), count));
     }
 
-    public static boolean checkTitanSpawnRules(EntityType<TitanEntity> type, ServerLevelAccessor level,
+    public static boolean checkTitanSpawnRules(EntityType<? extends TitanEntity> type, ServerLevelAccessor level,
                                                 MobSpawnType spawnType, BlockPos pos, RandomSource random) {
         // Require open sky
         if (!level.canSeeSky(pos)) {

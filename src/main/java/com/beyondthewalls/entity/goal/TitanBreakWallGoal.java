@@ -17,7 +17,7 @@ public class TitanBreakWallGoal extends Goal {
     private final TitanEntity titan;
     private BlockPos targetWall;
     private int breakProgress;
-    private int breakTime;
+    protected int breakTime;
     private int searchCooldown;
 
     public TitanBreakWallGoal(TitanEntity titan) {
