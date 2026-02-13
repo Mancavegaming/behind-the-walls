@@ -65,7 +65,7 @@ public class TitanEntity extends Monster {
     public static AttributeSupplier.Builder createAttributes() {
         return Monster.createMonsterAttributes()
                 .add(Attributes.MAX_HEALTH, 100.0)
-                .add(Attributes.MOVEMENT_SPEED, 0.28)
+                .add(Attributes.MOVEMENT_SPEED, 0.18)
                 .add(Attributes.ATTACK_DAMAGE, 12.0)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.8)
                 .add(Attributes.FOLLOW_RANGE, 48.0)
@@ -73,10 +73,16 @@ public class TitanEntity extends Monster {
     }
 
     @Override
+    public int getMaxHeadYRot() {
+        // Slow turning speed — large creature feels heavy
+        return 8;
+    }
+
+    @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0, true));
         this.goalSelector.addGoal(2, new TitanBreakWallGoal(this));
-        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.8));
+        this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 0.6));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 16.0F));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }

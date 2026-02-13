@@ -94,6 +94,15 @@ public class Config {
             .comment("Maximum Titan Essence dropped on death")
             .defineInRange("essenceDropMax", 4, 0, 64);
 
+    // Structure generation settings
+    public static final ModConfigSpec.IntValue DISTRICT_STRUCTURE_WALL_HEIGHT = BUILDER
+            .comment("Height of walls in generated walled district structures (blocks above ground)")
+            .defineInRange("districtStructureWallHeight", 5, 1, 20);
+
+    public static final ModConfigSpec.IntValue DISTRICT_STRUCTURE_FOUNDATION_DEPTH = BUILDER
+            .comment("Depth of foundation below ground for generated walled district structures")
+            .defineInRange("districtStructureFoundationDepth", 3, 1, 10);
+
     // Refinery settings
     public static final ModConfigSpec.IntValue REFINERY_SPEED = BUILDER
             .comment("Ticks per refinery cycle (coal to cartridges)")

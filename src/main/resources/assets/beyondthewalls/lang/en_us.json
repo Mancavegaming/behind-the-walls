@@ -29,5 +29,6 @@
   "message.beyondthewalls.wall_built": "Built %d wall blocks",
   "message.beyondthewalls.war_horn_used": "The War Horn sounds... titans approach!",
   "message.beyondthewalls.wave_warning": "Warning: Titan wave approaching in 30 seconds!",
-  "message.beyondthewalls.wave_start": "Titan Wave %d! %d titans are attacking!"
+  "message.beyondthewalls.wave_start": "Titan Wave %d! %d titans are attacking!",
+  "structure.beyondthewalls.walled_district": "Walled District"
 }

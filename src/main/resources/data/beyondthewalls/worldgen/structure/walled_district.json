@@ -1,0 +1,6 @@
+{
+  "type": "beyondthewalls:walled_district",
+  "biomes": "#beyondthewalls:has_structure/walled_district",
+  "spawn_overrides": {},
+  "step": "surface_structures"
+}

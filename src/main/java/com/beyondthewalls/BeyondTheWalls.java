@@ -11,6 +11,7 @@ import com.beyondthewalls.init.ModBlocks;
 import com.beyondthewalls.init.ModCreativeTabs;
 import com.beyondthewalls.init.ModEntities;
 import com.beyondthewalls.init.ModItems;
+import com.beyondthewalls.init.ModStructures;
 import com.beyondthewalls.world.WaveManager;
 
 import net.minecraft.server.level.ServerLevel;
@@ -34,6 +35,7 @@ public class BeyondTheWalls {
         ModEntities.register(modEventBus);
         ModAttachments.register(modEventBus);
         ModCreativeTabs.register(modEventBus);
+        ModStructures.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(new GrapplingHandler());
         NeoForge.EVENT_BUS.addListener(this::onServerTick);
